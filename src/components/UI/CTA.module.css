@@ -1,0 +1,14 @@
+.cta_container a {
+    background-color: var(--primary-color);
+    font-size: 16px;
+    color: white;
+    border-radius: 3rem;
+    padding: 2rem 3rem;
+    transition: all .4s;
+}
+
+.cta_container:hover a {
+    background-color: transparent;
+    outline: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}

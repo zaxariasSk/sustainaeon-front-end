@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+:root {
+    --primary-color: #337e7b;
+    --nav-fs: 2.2rem
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+a {
+    text-decoration: unset;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    gap: 3rem;
+
+a {
+    font-size: var(--nav-fs);
+    padding: .5rem;
+    position: relative;
+}
+
+a:before {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    left: .5rem;
+    bottom: 0;
+    position: absolute;
+    transition: width .4s;
+}
+
+a:hover:before {
+    width: calc(100% - 1rem);
+}
+
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 6rem;
+}
+
+.outer-container {
+    max-width: 154rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+header.outer-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
