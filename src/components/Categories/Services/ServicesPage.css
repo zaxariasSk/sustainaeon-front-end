@@ -1,0 +1,36 @@
+.services_innerpage h1 {
+    font-size: var(--header-fs);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+}
+
+.articleContainer {
+    max-width: 1020px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.articleContainer > img {
+    margin-top: 2rem;
+    height: auto
+}
+
+.articleContainer h1 {
+    font-size: var(--header-fs);
+    text-align: center;
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+.service_content {
+    font-size: var(--sm-fs);
+    text-align: justify;
+    margin-top: 4rem;
+}
+
+@media screen and (max-width: 700px) {
+    .services_innerpage h1 {
+        text-align: center;
+    }
+}

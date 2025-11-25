@@ -1,0 +1,241 @@
+.blog_post_container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.blog_post_container li {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog_post > header img {
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    object-fit: cover;
+}
+
+.blog_post {
+    max-width: 49rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    outline: 2px solid #f3eada;
+    transition: box-shadow .4s;
+}
+
+.blog_post:hover {
+    box-shadow: 0 0 20px 0 #ffffffd4;
+}
+
+.blog_post > *:not(header) {
+    padding: 0 1rem;
+}
+
+.blog_post .author {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+.articleContainer {
+    max-width: 1020px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.articleContainer h1 {
+    font-size: var(--header-fs);
+    text-align: center;
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+.articleContainer address img {
+    border-radius: 50%;
+}
+
+.name_date_container {
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+
+.name_date_container time {
+    padding-left: 2rem;
+    font-size: 16px;
+}
+
+.name_date_container address {
+    padding-right: 2rem;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+
+.name_date_container address:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #cccccc;
+}
+
+.blog_content {
+    font-size: var(--sm-fs);
+    text-align: justify;
+    margin-top: 4rem;
+}
+
+.blog_content ol,
+.blog_content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.blog_post .author img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.blog_post .author span {
+    font-size: 14px;
+}
+
+.blog_post time {
+    font-size: 14px;
+    margin-top: 1rem;
+    display: block;
+    padding: 0 1rem;
+}
+
+.blog_post > h4 {
+    font-size: var(--normal-fs);
+    margin-top: 1rem;
+}
+
+.blog_post > h4 a {
+    display: block;
+    width: 100%;
+    text-wrap: pretty;
+}
+
+.blog_post .intro_desc {
+    font-size: var(--xs-fs);
+    margin-bottom: 2rem;
+}
+
+.read_more {
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 2rem;
+}
+
+.read_more a {
+    padding-right: 1rem;
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.blog_innerpage > div > h1 {
+    margin: 0 0 5rem;
+    color: white;
+    font-size: var(--header-fs);
+    font-weight: 700;
+}
+
+.galleryTitle {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: var(--normal-fs);
+    font-weight: 600;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1520px) {
+    .blog_post {
+        width: clamp(200px, 31.58vw, 48rem);
+    }
+
+    .blog_post > h4 {
+        font-size: clamp(22px, 1.58vw, var(--normal-fs));
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .embla__slide_el.blog_post {
+        width: 48rem;
+    }
+
+    .blog_post {
+        width: clamp(200px, 48vw, 48rem);
+    }
+
+    .blog_post_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog_innerpage > div {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blog_post > header img {
+        height: 19rem;
+    }
+
+    .blog_innerpage .blog_post > header img {
+        height: auto;
+    }
+
+    .blog_post {
+        width: 100%;
+        max-width: 48rem;
+    }
+
+    .blog_post_container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 3rem;
+    }
+
+    .blog_innerpage > div > h1 {
+        text-align: center;
+    }
+
+    .name_date_container address {
+        padding-right: 1rem;
+    }
+
+    .name_date_container time {
+        padding-left: 1rem;
+    }
+}

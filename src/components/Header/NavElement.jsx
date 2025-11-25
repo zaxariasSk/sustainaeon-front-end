@@ -2,10 +2,11 @@ import {Link} from "react-router-dom";
 
 const NavElement = ({
                         label,
-                        url
+                        url,
+                        onClick
                     }) => {
     return (
-        <Link to={url}>
+        <Link onClick={onClick} to={url}>
             {label}
         </Link>
     )
