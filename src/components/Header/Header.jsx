@@ -12,7 +12,7 @@ const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [_, setIsMobileView] = useState(false);
+    const [, setIsMobileView] = useState(false);
 
     // Handle scroll effect
     useEffect(() => {
