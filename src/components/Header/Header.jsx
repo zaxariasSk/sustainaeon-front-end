@@ -12,7 +12,7 @@ const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isMobileView, setIsMobileView] = useState(false);
+    const [_, setIsMobileView] = useState(false);
 
     // Handle scroll effect
     useEffect(() => {
@@ -26,7 +26,7 @@ const Header = () => {
             window.removeEventListener("load", handleScroll);
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [pathname]);
 
     // Handle responsive breakpoint
     useEffect(() => {
