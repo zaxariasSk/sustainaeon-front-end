@@ -47,9 +47,9 @@ const Footer = () => {
                         </p>
                         <p>
                             <a
-                                href="tel:+302101234567"
+                                href="tel:+447926959141"
                                 itemProp="telephone">
-                                +30 210 123 4567
+                                +44 7926 959 141
                             </a>
                         </p>
                         <p>
