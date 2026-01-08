@@ -67,9 +67,9 @@ const PageSEO = ({
                 <link
                     rel="preload"
                     as="image"
-                    href="https://www.sustainaeon.com/uploads/slider1_5c13c992c4.jpg"
+                    href="https://api.sustainaeon.com/uploads/slider1_5c13c992c4.jpg"
                     fetchPriority="high"
-                    imageSrcSet="https://www.sustainaeon.com/uploads/slider1_5c13c992c4.jpg 1920w"
+                    imageSrcSet="https://api.sustainaeon.com/uploads/slider1_5c13c992c4.jpg 1920w"
                     imageSizes="100vw" />
             }
             {/* Open Graph */}
