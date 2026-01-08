@@ -21,6 +21,7 @@ const ServicesPage = lazy(() => import('./components/Categories/Services/Service
 const ServiceDetailPage = lazy(() => import('./components/Categories/Services/ServiceDetailPage'));
 const BlogListPage = lazy(() => import('./components/Categories/BlogPosts/BlogListPage'));
 const BlogPostPage = lazy(() => import('./components/Categories/BlogPosts/BlogPostPage'));
+const ConsultationRequestPage = lazy(() => import('./components/ConsultationRequest/ConsulationRequestPage'));
 
 const router = createBrowserRouter([
     {
@@ -80,6 +81,14 @@ const router = createBrowserRouter([
                 ),
                 loader: blogPostLoader,
             },
+            {
+                path: "consulation-request",
+                element: (
+                    <Suspense fallback={<div>Loading Consultation Request page...</div>}>
+                        <ConsultationRequestPage />
+                    </Suspense>
+                )
+            }
         ],
     },
 

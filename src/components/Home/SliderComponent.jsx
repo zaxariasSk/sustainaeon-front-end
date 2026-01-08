@@ -43,7 +43,7 @@ const SliderComponent = ({slider}) => {
                                     alt={imgBase.alternativeText || ''}
                                     width={imgBase.width}
                                     height={imgBase.height}
-                                    fetchPriority={index === 0 ? 'high' : 'auto'}
+                                    // fetchPriority={index === 0 ? 'high' : 'auto'}
                                     loading={index > 0 ? 'lazy' : 'eager'}
                                     decoding={index > 0 ? 'async' : 'sync'}
                                 />
@@ -56,7 +56,7 @@ const SliderComponent = ({slider}) => {
                                 )}
 
                                 <div className="embla__cta">
-                                    <CTA label="Book a Free 15-Minute Consultation" />
+                                    <CTA label="Book a Free 30-Minute Consultation" url={"consulation-request"} />
                                 </div>
                             </div>
                         );
